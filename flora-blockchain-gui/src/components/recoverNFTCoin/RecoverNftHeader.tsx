@@ -10,7 +10,7 @@ import { useHistory } from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import styled from "styled-components";
 import {Button, Flex, Logo} from "@flora/core";
-import LayoutHero from "@flora/layout/LayoutHero";
+import LayoutHero from '../layout/LayoutHero';
 import useOpenDialog from "../../hooks/useOpenDialog";
 import {RootState} from "../../modules/rootReducer";
 import Fingerprint from "../../types/Fingerprint";
