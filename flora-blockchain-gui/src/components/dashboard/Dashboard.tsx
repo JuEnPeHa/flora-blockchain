@@ -2,12 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Route, Switch, useRouteMatch } from 'react-router';
 import { AppBar, Toolbar, Drawer, Divider } from '@material-ui/core';
-import {
-  DarkModeToggle,
-  LocaleToggle,
-  Flex,
-  Logo,
-  ToolbarSpacing,
+import {DarkModeToggle, LocaleToggle, Flex, Logo, ToolbarSpacing,
 } from '@flora/core';
 import { defaultLocale, locales } from '../../config/locales';
 import Wallets from '../wallet/Wallets';
