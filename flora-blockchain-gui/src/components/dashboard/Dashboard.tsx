@@ -11,7 +11,7 @@ import Plot from '../plot/Plot';
 import Farm from '../farm/Farm';
 import Pool from '../pool/Pool';
 import Block from '../block/Block';
-import RecoverNft from '../recoverNFTCoin/RecoverNft';
+import RecoverNft from '../recoverNft/RecoverNft';
 import DashboardSideBar from './DashboardSideBar';
 import { DashboardTitleTarget } from './DashboardTitle';
 import TradeManager from '../trading/TradeManager';
