@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro';
 import {More, Amount, Fee, Form, TextField as FloraTextField, AlertDialog,
   CopyToClipboard, Flex, Card,} from '@flora/core';
 import { useDispatch, useSelector } from 'react-redux';
-import { Typography, Container, Grid } from '@material-ui/core';
+import { Typography, Container, Grid, Button } from '@material-ui/core';
 import isNumeric from 'validator/es/lib/isNumeric';
 import { useForm, useWatch } from "react-hook-form";
 import LayoutHero from "../layout/LayoutHero";
@@ -50,6 +50,47 @@ function LookForNftCoinsInputText() {
             label={<Trans>FD_CLI_BC_DB_PATH</Trans>}
             />
         </Grid>
+        <Grid xs={12} item>
+          <FloraTextField
+            id="filled-secondary"
+            name="FD_CLI_WT_DB_PATH"
+            variant="filled"
+            color="secondary"
+            label={<Trans>FD_CLI_WT_DB_PATH</Trans>}
+            fullWidth
+          />
+        </Grid>
+        <Grid xs={12} item>
+          <FloraTextField
+            id="filled-secondary"
+            name="LAUNCHER_HASH"
+            variant="filled"
+            color="secondary"
+            label={<Trans>LAUNCHER_HASH</Trans>}
+            fullWidth
+          />
+        </Grid>
+        <Grid xs={12} item>
+          <FloraTextField
+            id="filled-secondary"
+            name="FD_CLI_WT_DB_PATH"
+            variant="filled"
+            color="secondary"
+            label={<Trans>POOL_CONTRACT_ADDRESS</Trans>}
+            fullWidth
+          />
+        </Grid>
+        <Grid xs={12} item>
+          <Flex justifyContent="flex-end" gap={1}>
+            <Button
+              variant="contained"
+              color="primary"
+              type="submit"
+              >
+              <Trans>Submit</Trans>
+            </Button>
+          </Flex>
+        </Grid>
       </Grid>
 
     </Form>
@@ -82,7 +123,9 @@ export default function LookForNftCoins() {
         <Typography color="textSecondary">
           <Trans>Texto 02</Trans>
         </Typography>
-
+      </Flex>
+      <Flex flexDirection="column" gap={3}>
+        <LookForNftCoinsInputText />
       </Flex>
 
     </Flex>
