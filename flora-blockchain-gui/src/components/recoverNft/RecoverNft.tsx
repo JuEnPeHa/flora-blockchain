@@ -3,7 +3,7 @@ import {Route, Switch, useRouteMatch} from "react-router-dom";
 import {Flex, Link} from "@flora/core";
 import { Trans } from "@lingui/macro";
 import RecoverNftSelectFingerprint
-  from "@flora/recoverNft/RecoverNftSelectFingerprint";
+  from "../recoverNft/RecoverNftSelectFingerprint";
 import LayoutMain from "../layout/LayoutMain";
 import { RecoverNftHeaderTarget } from "./RecoverNftHeader";
 
