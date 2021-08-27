@@ -3,7 +3,9 @@ import { Trans } from '@lingui/macro';
 import {More, Amount, Fee, Form, TextField as FloraTextField, AlertDialog,
   CopyToClipboard, Flex, Card,} from '@flora/core';
 import { useDispatch, useSelector } from 'react-redux';
-import { Typography } from '@material-ui/core';
+import { Typography, Container } from '@material-ui/core';
+import LayoutHero from "../layout/LayoutHero";
+
 
 type SetNftPlotData = {
   FD_CLI_BC_DB_PATH: string;
@@ -16,6 +18,8 @@ export default function LookForNftCoins() {
   const dispatch = useDispatch();
 
   return (
+    <LayoutHero>
+      <Container maxWidth="xs">
   <Flex flexDirection="column" gap={1}>
     <Flex gap={1} alignItems="center">
 
@@ -36,5 +40,7 @@ export default function LookForNftCoins() {
 
     </Flex>
   </Flex>
+      </Container>
+    </LayoutHero>
   );
 }
