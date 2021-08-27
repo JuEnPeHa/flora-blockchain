@@ -1,4 +1,3 @@
-import LayoutHero from "@flora/layout/LayoutHero";
 import {
   Card,
   Container,
@@ -12,6 +11,7 @@ import React from "react";
 import {useHistory} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import styled from "styled-components";
+import LayoutHero from "../layout/LayoutHero";
 import Fingerprint from "../../types/Fingerprint";
 import useOpenDialog from "../../hooks/useOpenDialog";
 import {RootState} from "../../modules/rootReducer";
