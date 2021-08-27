@@ -2,6 +2,8 @@ import React from "react";
 import {Route, Switch, useRouteMatch} from "react-router-dom";
 import {Flex, Link} from "@flora/core";
 import { Trans } from "@lingui/macro";
+import RecoverNftSelectFingerprint
+  from "@flora/recoverNft/RecoverNftSelectFingerprint";
 import LayoutMain from "../layout/LayoutMain";
 import { RecoverNftHeaderTarget } from "./RecoverNftHeader";
 
@@ -22,7 +24,7 @@ export default function RecoverNft() {
       <Flex flexDirection="column" gap={3}>
         <Switch>
           <Route path={path} exact>
-            <RecoverNftHeaderTarget />
+            <RecoverNftSelectFingerprint />
           </Route>
         </Switch>
       </Flex>
