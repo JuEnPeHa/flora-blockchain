@@ -6,6 +6,7 @@ import RecoverNftSelectFingerprint
   from "../recoverNft/RecoverNftSelectFingerprint";
 import LayoutMain from "../layout/LayoutMain";
 import { RecoverNftHeaderTarget } from "./RecoverNftHeader";
+import LookForNftCoins from "../recoverNft/RecoverNftInputText";
 
 export default function RecoverNft() {
   const { path } = useRouteMatch();
@@ -27,7 +28,11 @@ export default function RecoverNft() {
             <RecoverNftSelectFingerprint />
           </Route>
         </Switch>
+          <Route path={path} exact>
+            <LookForNftCoins />
+          </Route>
       </Flex>
+
     </LayoutMain>
   )
 }

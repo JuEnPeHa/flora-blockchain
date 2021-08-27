@@ -81,7 +81,6 @@ export default function RecoverNftSelectFingerprint(){
                           </Trans>
                           </Typography>
                         }
-                        secondary={<Trans>Secondary</Trans>}
                       />
                     </StyledFingerprintListItem>
                   ))}
