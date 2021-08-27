@@ -43,7 +43,7 @@ export default function RecoverNftSelectFingerprint(){
           <Logo width={130} />
           {hasFingerprints ? (
             <Typography variant="h5" component="h1" gutterBottom>
-              <Trans>Select Key</Trans>
+              <Trans>Recover Nft Coins</Trans>
             </Typography>
           ) : (
             <>
@@ -75,9 +75,11 @@ export default function RecoverNftSelectFingerprint(){
                     >
                       <ListItemText
                         primary={
+                          <Typography variant="h5" component="h1" gutterBottom>
                           <Trans>
-                            Private key with public fingerprint {fingerprint}
+                            Fingerprint: {fingerprint}
                           </Trans>
+                          </Typography>
                         }
                         secondary={<Trans>Secondary</Trans>}
                       />
