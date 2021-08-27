@@ -3,8 +3,11 @@ import { Trans } from '@lingui/macro';
 import {More, Amount, Fee, Form, TextField as FloraTextField, AlertDialog,
   CopyToClipboard, Flex, Card,} from '@flora/core';
 import { useDispatch, useSelector } from 'react-redux';
-import { Typography, Container } from '@material-ui/core';
+import { Typography, Container, Grid } from '@material-ui/core';
+import isNumeric from 'validator/es/lib/isNumeric';
+import { useForm, useWatch } from "react-hook-form";
 import LayoutHero from "../layout/LayoutHero";
+import { openDialog } from '../../modules/dialog';
 
 
 type SetNftPlotData = {
@@ -13,6 +16,50 @@ type SetNftPlotData = {
   LAUNCHER_HASH: string;
   POOL_CONTRACT_ADDRESS: string;
 };
+
+function handleSubmit(data){
+  console.log(data)
+}
+
+function LookForNftCoinsInputText() {
+  const dispatch = useDispatch();
+
+  const methods = useForm<SetNftPlotData>({
+    shouldUnregister: false,
+    defaultValues: {
+      FD_CLI_BC_DB_PATH: '',
+      FD_CLI_WT_DB_PATH: '',
+      LAUNCHER_HASH: '',
+      POOL_CONTRACT_ADDRESS: '',
+    },
+  });
+
+  return (
+    <Card
+      title={<Trans>Texto 03</Trans>}
+      tooltip={<Trans>Texto 04 (Tooltip)</Trans>}
+      >
+    <Form methods={methods} onSubmit={handleSubmit}>
+      <Grid spacing={3} container>
+        <Grid xs={12} item>
+          <FloraTextField
+            name="FD_CLI_BC_DB_PATH"
+            variant="filled"
+            color="secondary"
+            fullWidth
+            label={<Trans>FD_CLI_BC_DB_PATH</Trans>}
+            />
+        </Grid>
+      </Grid>
+
+    </Form>
+
+    </Card>
+
+
+  )
+
+}
 
 export default function LookForNftCoins() {
   const dispatch = useDispatch();
