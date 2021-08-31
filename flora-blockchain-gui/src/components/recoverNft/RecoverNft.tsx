@@ -7,6 +7,9 @@ import RecoverNftSelectFingerprint
 import LayoutMain from "../layout/LayoutMain";
 import { RecoverNftHeaderTarget } from "./RecoverNftHeader";
 import LookForNftCoins from "../recoverNft/RecoverNftInputText";
+import SelectWorker from "../recoverNft/workerSelect";
+
+
 
 export default function RecoverNft() {
   const { path } = useRouteMatch();
@@ -16,17 +19,23 @@ export default function RecoverNft() {
       title={
         <>
         <Link to="/dashboard/recoverNft" color="textPrimary">
-          <Trans>RecoverNft</Trans>
+          <Trans>Worker</Trans>
         </Link>
           <RecoverNftHeaderTarget />
         </>
       }
   >
+
       <Flex flexDirection="column" gap={3}>
         <Switch>
           <Route path={path} exact>
             <RecoverNftSelectFingerprint />
           </Route>
+          <Switch>
+            <Route path={path} exact>
+              <SelectWorker />
+            </Route>
+          </Switch>
         </Switch>
           <Route path={path} exact>
             <LookForNftCoins />
