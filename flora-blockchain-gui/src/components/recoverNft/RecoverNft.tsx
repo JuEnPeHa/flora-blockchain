@@ -31,15 +31,17 @@ export default function RecoverNft() {
           <Route path={path} exact>
             <RecoverNftSelectFingerprint />
           </Route>
+        </Switch>
+        <Switch>
+          <Route path={path} exact>
+            <LookForNftCoins />
+          </Route>
+        </Switch>
           <Switch>
             <Route path={path} exact>
               <SelectWorker />
             </Route>
           </Switch>
-        </Switch>
-          <Route path={path} exact>
-            <LookForNftCoins />
-          </Route>
       </Flex>
 
     </LayoutMain>
