@@ -1,12 +1,12 @@
 import { FormControl, InputLabel, MenuItem, Theme}
   from '@material-ui/core';
-import styles from "@material-ui/styles";
 import React from "react";
 import {Select} from "@flora/core";
 import ReactDOM from 'react-dom';
+import {makeStyles, createStyles} from "@material-ui/styles";
 
-const useStyles = styles.makeStyles((theme: Theme) =>
-styles.createStyles({
+const useStyles = makeStyles((theme: Theme) =>
+createStyles({
   formControl: {
     margin: theme.spacing(1),
     minWidth: 120,
