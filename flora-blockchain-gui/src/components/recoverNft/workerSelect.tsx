@@ -33,11 +33,11 @@ export default function SelectWorker() {
       <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel id="select-Worker-Label">Worker</InputLabel>
         <Select
-          labelId="select-Worker"
+          /* labelId="select-Worker"
           id="worker-Select"
           value={worker}
           onChange={handleChange}
-          label="worker"
+          label="worker" */
           name="worker"
           >
           <MenuItem value="">
