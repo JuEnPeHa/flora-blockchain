@@ -1,4 +1,4 @@
-import { FormControl, Grid, InputLabel, MenuItem, Theme}
+import { FormControl, Grid, InputLabel, MenuItem }
   from '@material-ui/core';
 import React from "react";
 import {Select} from "@flora/core";
@@ -8,11 +8,11 @@ import { useFormContext } from 'react-hook-form';
 import { Trans } from '@lingui/macro';
 
 export default function SelectWorker() {
-  const [worker, setWorker] = React.useState("");
 
   function handleChange (event: any) {
-    console.log(event)
-  };
+    // eslint-disable-next-line no-console
+    console.log(event);
+  }
 
   return (
     <Grid spacing={2} direction="column" container>
@@ -32,7 +32,7 @@ export default function SelectWorker() {
       </FormControl>
       </Grid>
 
-  {worker && (
+  {Worker && (
     <Grid xs={12} md={8} lg={6} item>
       <Trans>HEY, IT WORKS</Trans>
     </Grid>
