@@ -7,20 +7,7 @@ import {makeStyles, createStyles} from "@material-ui/styles";
 import { useFormContext } from 'react-hook-form';
 import { Trans } from '@lingui/macro';
 
-const useStyles = makeStyles((theme: Theme) =>
-createStyles({
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-  },
-  selectEmpty: {
-    marginTop: theme.spacing(2),
-  },
-}),
-);
-
 export default function SelectWorker() {
-  const classes = useStyles();
   const [worker, setWorker] = React.useState("");
 
   function handleChange (event: any) {
@@ -30,7 +17,7 @@ export default function SelectWorker() {
   return (
     <Grid spacing={2} direction="column" container>
       <Grid xs={12} md={8} lg={6} item>
-      <FormControl variant="outlined" className={classes.formControl}>
+      <FormControl variant="outlined" fullWidth>
         <InputLabel id="select-Worker-Label">Worker</InputLabel>
         <Select
           /* labelId="select-Worker"
