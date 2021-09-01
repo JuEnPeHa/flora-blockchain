@@ -20,14 +20,11 @@ createStyles({
 );
 
 export default function SelectWorker() {
-  const { watch } = useFormContext();
-  const workers = watch("workers")
   const classes = useStyles();
   const [worker, setWorker] = React.useState("");
 
-  const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setWorker(event.target.value as string);
-    console.log(event.target.value)
+  function handleChange (event: any) {
+    console.log(event)
   };
 
   return (
@@ -41,7 +38,7 @@ export default function SelectWorker() {
           value={worker}
           onChange={handleChange}
           label="worker"
-          name="workers"
+          name="worker"
           >
           <MenuItem value="">
             <em>None</em>
@@ -53,7 +50,7 @@ export default function SelectWorker() {
       </FormControl>
       </Grid>
 
-  {workers && (
+  {worker && (
     <Grid xs={12} md={8} lg={6} item>
       <Trans>HEY, IT WORKS</Trans>
     </Grid>
