@@ -18,21 +18,14 @@ export default function SelectWorker() {
     <Grid spacing={2} direction="column" container>
       <Grid xs={12} md={8} lg={6} item>
       <FormControl variant="outlined" fullWidth>
-        <InputLabel id="select-Worker-Label">Worker</InputLabel>
-        <Select
-          /* labelId="select-Worker"
-          id="worker-Select"
-          value={worker}
-          onChange={handleChange}
-          label="worker" */
-          name="worker"
-          >
+        <InputLabel required>Worker</InputLabel>
+        <Select name="worker">
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
           <MenuItem value ={1}>fd_cli</MenuItem>
-          <MenuItem value ={1}>noActionYet</MenuItem>
-          <MenuItem value ={1}>Soon</MenuItem>
+          <MenuItem value ={2}>noActionYet</MenuItem>
+          <MenuItem value ={3}>Soon</MenuItem>
         </Select>
       </FormControl>
       </Grid>
