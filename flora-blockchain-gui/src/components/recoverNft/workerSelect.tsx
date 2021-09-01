@@ -2,8 +2,6 @@ import { FormControl, Grid, InputLabel, MenuItem }
   from '@material-ui/core';
 import React from "react";
 import {Select} from "@flora/core";
-import ReactDOM from 'react-dom';
-import {makeStyles, createStyles} from "@material-ui/styles";
 import { useFormContext } from 'react-hook-form';
 import { Trans } from '@lingui/macro';
 
@@ -31,15 +29,6 @@ export default function SelectWorker() {
         </Select>
       </FormControl>
       </Grid>
-
-  {Worker && (
-    <Grid xs={12} md={8} lg={6} item>
-      <Trans>HEY, IT WORKS</Trans>
     </Grid>
+
   )}
-    </Grid>
-
-  )
-
-
-}
