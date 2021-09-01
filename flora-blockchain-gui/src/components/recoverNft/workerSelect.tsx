@@ -17,8 +17,10 @@ export default function SelectWorker() {
   return (
     <Grid spacing={2} direction="column" container>
       <Grid xs={12} md={8} lg={6} item>
-      <FormControl variant="outlined" fullWidth>
-        <InputLabel required>Worker</InputLabel>
+      <FormControl variant="filled" fullWidth>
+        <InputLabel required>
+          <Trans>Worker</Trans>
+        </InputLabel>
         <Select name="worker">
           <MenuItem value="">
             <em>None</em>
