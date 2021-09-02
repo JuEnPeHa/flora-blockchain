@@ -34,6 +34,11 @@ export default function RecoverNft() {
         </Switch>
         <Switch>
           <Route path={path} exact>
+            <SelectWorker />
+          </Route>
+        </Switch>
+        <Switch>
+          <Route path={path} exact>
             <LookForNftCoins />
           </Route>
         </Switch>

@@ -6,11 +6,9 @@ import { useFormContext } from 'react-hook-form';
 import { Trans } from '@lingui/macro';
 
 export default function SelectWorker() {
+  const {watch} = useFormContext();
+  const worker = watch("worker");
 
-  function handleChange (event: any) {
-    // eslint-disable-next-line no-console
-    console.log(event);
-  }
 
   return (
     <Grid spacing={2} direction="column" container>
