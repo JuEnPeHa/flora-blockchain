@@ -1,7 +1,7 @@
-import { FormControl, Grid, InputLabel, MenuItem }
+import {FormControl, FormControlLabel, Grid, InputLabel, MenuItem, Radio}
   from '@material-ui/core';
 import React from "react";
-import {Select} from "@flora/core";
+import {Flex, RadioGroup, Select} from "@flora/core";
 import { useFormContext } from 'react-hook-form';
 import { Trans } from '@lingui/macro';
 
@@ -18,15 +18,30 @@ export default function SelectWorker() {
           <Trans>Worker</Trans>
         </InputLabel>
         <Select name="worker">
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
           <MenuItem value ={1}>fd_cli</MenuItem>
           <MenuItem value ={2}>noActionYet</MenuItem>
           <MenuItem value ={3}>Soon</MenuItem>
         </Select>
       </FormControl>
       </Grid>
+
+      <FormControl variant="filled" fullWidth>
+        <RadioGroup name="worker" boolean>
+          <Flex gap={2} flexWrap="wrap">
+            <FormControlLabel
+              value={false}
+              control={<Radio />}
+              label={<Trans>Add Plot to Queue</Trans>}
+            />
+            <FormControlLabel
+              control={<Radio />}
+              label={<Trans>Plot in Worker</Trans>}
+              value
+            />
+          </Flex>
+        </RadioGroup>
+      </FormControl>
+
     </Grid>
 
   )}
