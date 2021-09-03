@@ -39,15 +39,14 @@ export default function RecoverNftSelectFingerprint(){
   return (
     <LayoutHero>
       <Container maxWidth="xs">
-        <Flex flexDirection="column" alignItems="center" gap={3}>
-          <Logo width={130} />
+        <Flex flexDirection="column" alignItems="left" gap={3}>
           {hasFingerprints ? (
-            <Typography variant="h5" component="h1" gutterBottom>
-              <Trans>Recover Nft Coins</Trans>
+            <Typography variant="h4" component="h1" gutterBottom>
+              <Trans>Title</Trans>
             </Typography>
           ) : (
             <>
-              <Typography variant="h5" component="h1" gutterBottom>
+              <Typography variant="h3" component="h1" gutterBottom>
                 <Trans>Sign in</Trans>
               </Typography>
               <Typography variant="subtitle1">
@@ -75,7 +74,7 @@ export default function RecoverNftSelectFingerprint(){
                     >
                       <ListItemText
                         primary={
-                          <Typography variant="h5" component="h1" gutterBottom>
+                          <Typography variant="h2" component="h1" gutterBottom>
                           <Trans>
                             Fingerprint: {fingerprint}
                           </Trans>
