@@ -41,12 +41,12 @@ export default function RecoverNftSelectFingerprint(){
       <Container maxWidth="xs">
         <Flex flexDirection="column" alignItems="left" gap={3}>
           {hasFingerprints ? (
-            <Typography variant="h4" component="h1" gutterBottom>
+            <Typography variant="h6" component="h1" gutterBottom>
               <Trans>Title</Trans>
             </Typography>
           ) : (
             <>
-              <Typography variant="h3" component="h1" gutterBottom>
+              <Typography variant="h6" component="h1" gutterBottom>
                 <Trans>Sign in</Trans>
               </Typography>
               <Typography variant="subtitle1">
@@ -74,7 +74,7 @@ export default function RecoverNftSelectFingerprint(){
                     >
                       <ListItemText
                         primary={
-                          <Typography variant="h2" component="h1" gutterBottom>
+                          <Typography variant="body1" component="h1" gutterBottom>
                           <Trans>
                             Fingerprint: {fingerprint}
                           </Trans>

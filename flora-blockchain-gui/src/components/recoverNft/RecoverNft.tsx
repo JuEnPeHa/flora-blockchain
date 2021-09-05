@@ -5,6 +5,7 @@ import { Trans } from "@lingui/macro";
 import {useHistory} from "react-router";
 import {useDispatch, useSelector} from "react-redux";
 import {SubmitHandler, useForm} from "react-hook-form";
+import { Grid } from "@material-ui/core";
 import RecoverNftSelectFingerprint
   from "../recoverNft/RecoverNftSelectFingerprint";
 import LayoutMain from "../layout/LayoutMain";
@@ -65,6 +66,10 @@ export default function RecoverNft() {
         </>
       }
   >
+      <div className="divider-in-columns">
+        <Grid spacing={3} alignItems="stretch" container>
+        <Grid xs={12} sm={8} md={6} item>
+
       <Flex flexDirection="column" gap={3}>
         <Switch>
           <Route path={path} exact>
@@ -82,6 +87,16 @@ export default function RecoverNft() {
           </Route>
         </Switch>
       </Flex>
+
+        </Grid>
+          <Grid xs={12} sm={8} md={6} item>
+            <div>
+            <Trans>Hello</Trans>
+            </div>
+          </Grid>
+
+          </Grid>
+      </div>
 
     </LayoutMain>
     </Form>
