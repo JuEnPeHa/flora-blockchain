@@ -15,6 +15,7 @@ import SelectWorker from "../recoverNft/workerSelect";
 import type {RootState} from "../../modules/rootReducer";
 import WorkerConfig from "../../types/Worker";
 import useOpenDialog from "../../hooks/useOpenDialog";
+import LoginControl from "./ExampleSetState"
 
 type FormData = WorkerConfig & {
   p2_singleton_puzzle_hash?: string;
@@ -92,6 +93,13 @@ export default function RecoverNft() {
           <Grid xs={12} sm={8} md={6} item>
             <div>
             <Trans>Hello</Trans>
+            </div>
+            <div>
+              <Switch>
+                <Route path={path} exact>
+                  <LoginControl />
+                </Route>
+              </Switch>
             </div>
           </Grid>
 
