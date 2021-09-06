@@ -24,7 +24,7 @@ const StyledRoot = styled(Flex)`
 
 const StyledAppBar = styled(AppBar)`
   background-color: ${({ theme }) =>
-    theme.palette.type === 'dark' ? '#424242' : 'white'};
+    theme.palette.type === 'dark' ? '#707070' : 'white'};
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
   width: ${({ theme }) => `calc(100% - ${theme.drawer.width})`};
   margin-left: ${({ theme }) => theme.drawer.width};

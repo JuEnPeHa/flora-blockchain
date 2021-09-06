@@ -57,7 +57,6 @@ export default function RecoverNft() {
   };
 
   return (
-    <Form methods={methods} onSubmit={handleSubmit}>
     <LayoutMain
       title={
         <>
@@ -78,11 +77,15 @@ export default function RecoverNft() {
             <RecoverNftSelectFingerprint />
           </Route>
         </Switch>
+
+        <Form methods={methods} onSubmit={handleSubmit}>
         <Switch>
           <Route path={path} exact>
             <SelectWorker />
           </Route>
         </Switch>
+        </Form>
+
         <Switch>
           <Route path={path} exact>
             <LookForNftCoins />
@@ -115,6 +118,5 @@ export default function RecoverNft() {
       </div>
 
     </LayoutMain>
-    </Form>
   )
 }
