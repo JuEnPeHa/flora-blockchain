@@ -7,15 +7,16 @@ import {useDispatch, useSelector} from "react-redux";
 import {SubmitHandler, useForm} from "react-hook-form";
 import { Grid } from "@material-ui/core";
 import RecoverNftSelectFingerprint
-  from "../recoverNft/RecoverNftSelectFingerprint";
+  from "./RecoverNftSelectFingerprint";
 import LayoutMain from "../layout/LayoutMain";
 import { RecoverNftHeaderTarget } from "./RecoverNftHeader";
-import LookForNftCoins from "../recoverNft/RecoverNftInputText";
-import SelectWorker from "../recoverNft/workerSelect";
+import LookForNftCoins from "./RecoverNftInputText";
+import SelectWorker from "./workerSelect";
 import type {RootState} from "../../modules/rootReducer";
 import WorkerConfig from "../../types/Worker";
 import useOpenDialog from "../../hooks/useOpenDialog";
 import LoginControl from "./ExampleSetState"
+import ErrorRadios from "./ExampleDos";
 
 type FormData = WorkerConfig & {
   p2_singleton_puzzle_hash?: string;
@@ -98,6 +99,13 @@ export default function RecoverNft() {
               <Switch>
                 <Route path={path} exact>
                   <LoginControl />
+                </Route>
+              </Switch>
+            </div>
+            <div>
+              <Switch>
+                <Route path={path} exact>
+                  <ErrorRadios />
                 </Route>
               </Switch>
             </div>

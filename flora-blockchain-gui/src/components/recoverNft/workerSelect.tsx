@@ -30,24 +30,27 @@ export default function SelectWorker() {
           <MenuItem value ={2}>noActionYet</MenuItem>
           <MenuItem value ={3}>Soon</MenuItem>
         </Select>
+
+
+
       </FormControl>
 
-      <FormControl variant="filled" fullWidth>
-        <RadioGroup name="worker" boolean>
-          <Flex gap={2} flexWrap="wrap">
-            <FormControlLabel
-              value={false}
-              control={<Radio />}
-              label={<Trans>Add Plot to Queue</Trans>}
-            />
-            <FormControlLabel
-              control={<Radio />}
-              label={<Trans>Plot in Worker</Trans>}
-              value
-            />
-          </Flex>
-        </RadioGroup>
-      </FormControl>
+        <FormControl variant="filled" fullWidth>
+          <RadioGroup name="worker" boolean>
+            <Flex gap={2} flexWrap="wrap">
+              <FormControlLabel
+                value={false}
+                control={<Radio />}
+                label={<Trans>Add Plot to Queue</Trans>}
+              />
+              <FormControlLabel
+                control={<Radio />}
+                label={<Trans>Plot in Parallel</Trans>}
+                value
+              />
+            </Flex>
+          </RadioGroup>
+        </FormControl>
       </Grid>
 
       {worker && (
