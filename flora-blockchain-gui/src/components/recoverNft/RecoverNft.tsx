@@ -67,11 +67,10 @@ export default function RecoverNft() {
         </>
       }
   >
+      <Form methods={methods} onSubmit={handleSubmit}>
       <div className="divider-in-columns">
         <Grid spacing={3} alignItems="stretch" container>
-          <Form methods={methods} onSubmit={handleSubmit}>
-
-          <Grid xs={12} sm={8} md={6} item>
+        <Grid xs={12} sm={8} md={6} item>
 
       <Flex flexDirection="column" gap={3}>
         <Switch>
@@ -114,9 +113,9 @@ export default function RecoverNft() {
             </div>
           </Grid>
 
-          </Form>
-        </Grid>
+          </Grid>
       </div>
+      </Form>
 
 
     </LayoutMain>
