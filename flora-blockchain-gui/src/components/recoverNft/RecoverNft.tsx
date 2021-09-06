@@ -67,6 +67,8 @@ export default function RecoverNft() {
         </>
       }
   >
+      <Form methods={methods} onSubmit={handleSubmit}>
+
       <div className="divider-in-columns">
         <Grid spacing={3} alignItems="stretch" container>
         <Grid xs={12} sm={8} md={6} item>
@@ -78,13 +80,11 @@ export default function RecoverNft() {
           </Route>
         </Switch>
 
-        <Form methods={methods} onSubmit={handleSubmit}>
         <Switch>
           <Route path={path} exact>
             <SelectWorker />
           </Route>
         </Switch>
-        </Form>
 
         <Switch>
           <Route path={path} exact>
@@ -116,6 +116,8 @@ export default function RecoverNft() {
 
           </Grid>
       </div>
+      </Form>
+
 
     </LayoutMain>
   )
