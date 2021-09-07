@@ -1,19 +1,14 @@
-import {
-  FormControl,
-  FormControlLabel,
-  Grid, InputAdornment,
-  InputLabel,
-  MenuItem,
-  Radio,
-  Typography
-}
-  from '@material-ui/core';
+import {FormControl, FormControlLabel, Grid, InputAdornment, InputLabel,
+  MenuItem, Radio, Typography} from '@material-ui/core';
 import React from "react";
 import {Flex, RadioGroup, Select, TextField} from "@flora/core";
 import { useFormContext } from 'react-hook-form';
 import { Trans } from '@lingui/macro';
+import {Route, Switch, useRouteMatch} from "react-router-dom";
+import LookForNftCoins from "@flora/recoverNft/RecoverNftInputText";
 
 export default function SelectWorker() {
+  const { path } = useRouteMatch();
   const {watch} = useFormContext();
   const worker = watch("worker");
 
@@ -54,27 +49,13 @@ export default function SelectWorker() {
       </Grid>
 
       {worker && (
-        <Grid xs={12} md={8} lg={6} item>
-          <FormControl variant="filled">
-            <Typography variant="subtitle1">
-              <Trans>Want to have a delay before the next plot starts?</Trans>
-            </Typography>
-            <TextField
-              name="delay"
-              type="number"
-              variant="filled"
-              label={<Trans>Delay</Trans>}
-              InputProps={{
-                inputProps: { min: 0 },
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <Trans>Minutes</Trans>
-                  </InputAdornment>
-                ),
-              }}
-            />
-          </FormControl>
-        </Grid>
+        <Flex flexDirection="column" gap={3}>
+        <Switch>
+          <Route path={path} exact>
+            <LookForNftCoins />
+          </Route>
+        </Switch>
+        </Flex>
       )}
     </Grid>
 
