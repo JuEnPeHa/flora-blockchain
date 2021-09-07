@@ -5,7 +5,7 @@ import {Flex, RadioGroup, Select, TextField} from "@flora/core";
 import { useFormContext } from 'react-hook-form';
 import { Trans } from '@lingui/macro';
 import {Route, Switch, useRouteMatch} from "react-router-dom";
-import LookForNftCoins from "@flora/recoverNft/RecoverNftInputText";
+import LookForNftCoins from "./RecoverNftInputText";
 
 export default function SelectWorker() {
   const { path } = useRouteMatch();
