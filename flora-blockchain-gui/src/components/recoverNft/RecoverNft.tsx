@@ -84,12 +84,13 @@ export default function RecoverNft() {
             <SelectWorker />
           </Route>
         </Switch>
-
+        {/*
         <Switch>
           <Route path={path} exact>
             <LookForNftCoins />
           </Route>
         </Switch>
+        */}
       </Flex>
 
         </Grid>
