@@ -21,9 +21,9 @@ export default function SelectWorker() {
           <Trans>Worker</Trans>
         </InputLabel>
         <Select name="worker">
-          <MenuItem value ={1}>fd_cli</MenuItem>
-          <MenuItem value ={2}>noActionYet</MenuItem>
-          <MenuItem value ={3}>Soon</MenuItem>
+          <MenuItem value ="1">fd_cli</MenuItem>
+          <MenuItem value ="2">noActionYet</MenuItem>
+          <MenuItem value ="3">Soon</MenuItem>
         </Select>
 
       </FormControl>

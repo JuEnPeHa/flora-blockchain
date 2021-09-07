@@ -11,7 +11,7 @@ import RecoverNftSelectFingerprint
 import LayoutMain from "../layout/LayoutMain";
 import { RecoverNftHeaderTarget } from "./RecoverNftHeader";
 import LookForNftCoins from "./RecoverNftInputText";
-import SelectWorker from "./workerSelect";
+import SelectWorker from "./WorkerSelect";
 import type {RootState} from "../../modules/rootReducer";
 import WorkerConfig from "../../types/Worker";
 import useOpenDialog from "../../hooks/useOpenDialog";

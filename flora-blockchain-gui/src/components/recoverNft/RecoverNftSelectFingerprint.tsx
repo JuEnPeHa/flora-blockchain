@@ -39,24 +39,10 @@ export default function RecoverNftSelectFingerprint(){
   return (
     <LayoutHero>
       <Container maxWidth="xs">
-        <Flex flexDirection="column" alignItems="left" gap={3}>
-          {hasFingerprints ? (
-            <Typography variant="h6" component="h1" gutterBottom>
+        <Flex flexDirection="column" alignItems="left" gap={2}>
+          <Typography variant="body1" component="h1" gutterBottom>
               <Trans>Title</Trans>
             </Typography>
-          ) : (
-            <>
-              <Typography variant="h6" component="h1" gutterBottom>
-                <Trans>Sign in</Trans>
-              </Typography>
-              <Typography variant="subtitle1">
-                <Trans>
-                  Welcome to Flora. Please log in with an existing key, or create
-                  a new key.
-                </Trans>
-              </Typography>
-            </>
-          )}
           <Flex
             flexDirection="column"
             gap={3}
